@@ -63,6 +63,42 @@ i.fas:hover {
     background: $orange;
     cursor: pointer;
   }
+input {
+    border-radius: 3px;
+    border: none;
+    height: 28px;
+    width: 100px;
+    font-size: 18px;
+    padding-left: 5px;
+}
+Button {
+	background-color: $orange;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+    border-radius:10px;
+    border: none;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+    padding:12px 18px;
+    opacity: .7;
+    transition: .3s;
+}
+Button:hover {
+    opacity: 1;
+}
+Button:active {
+	position:relative;
+	top:1px;
+}
+#final {
+    background-color: white;
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+    width: 500px;
+    margin: 0 auto;
+}
 #container2 {
     background-color: rgb(226, 226, 226);
     padding: 10px 0px;
