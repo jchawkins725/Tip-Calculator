@@ -5,7 +5,6 @@ body {
     text-align: center;
     font-family: $font;
     background-color: rgb(223, 223, 223);
-    padding: 10px;
 }
 .container {
     background-color: white;
@@ -25,10 +24,11 @@ h1 {
 i.fas {
     margin: 5px 5px;
     color: $orange;
-    font-size: 27px;
+    font-size: 25px;
     cursor: pointer;
-    opacity: 0.4;
+    opacity: 0.7;
     transition: .3s;
+    padding: 0px 5px 20px 5px;
 }
 i.fas:hover {
     opacity: 1;
@@ -63,3 +63,10 @@ i.fas:hover {
     background: $orange;
     cursor: pointer;
   }
+#container2 {
+    background-color: rgb(226, 226, 226);
+    padding: 10px 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}

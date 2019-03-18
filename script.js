@@ -6,6 +6,7 @@ slider.oninput = function() {
 }
 output.innerHTML = slider.value + "%";
 
+
 document.getElementById("terrible").addEventListener("click",
 function () {
     slider.value = 5;
