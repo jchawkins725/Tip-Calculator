@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tip Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Tip Calculator</h1>
+            <h2>How was your experience?</h2>
+            <i class="fas fa-angry left" id="terrible">Terrible (5% Tip)</i><br>
+            <i class="fas fa-frown" id="bad">Bad (10% Tip)</i><br>
+            <i class="fas fa-meh" id="satisfactory">Satisfactory (15% Tip)</i><br>
+            <i class="fas fa-smile" id="good">Good (20% Tip)</i><br>
+            <i class="fas fa-smile-beam" id="great">Great (25% Tip)</i>
+            <form>
+                <input type="range" class="form-control-range" id="slider" min="5" max="25">  
+            </form>   
+            <h2 id="output"></h2>
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>
