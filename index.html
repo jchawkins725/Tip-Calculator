@@ -11,21 +11,23 @@
         <div class="container">
             <h1>Tip Calculator</h1>
             <h2>Rate your experience to determine tip %:</h2>
-            <i class="fas fa-angry left" id="terrible">Terrible</i>
-            <i class="fas fa-frown" id="bad">Bad</i>
-            <i class="fas fa-meh" id="satisfactory">OK</i>
-            <i class="fas fa-smile" id="good">Good </i>
-            <i class="fas fa-smile-beam" id="great">Great</i>
+            <div class="faces">
+                <i class="fas fa-angry left" id="terrible">Terrible</i>
+                <i class="fas fa-frown" id="bad">Bad</i>
+                <i class="fas fa-meh" id="satisfactory">OK</i>
+                <i class="fas fa-smile" id="good">Good </i>
+                <i class="fas fa-smile-beam" id="great">Great</i>
+            </div>
             <h2>Or manually choose your tip:</h2>
             <form>
-                <input type="range" class="form-control-range" id="slider" min="5" max="25">  
+                <input type="range" class="form-control-range" id="slider" min="5" max="25" value="15">  
             </form>
             <h2 id="output"></h2>
             <div id="container2"> 
-                <h2><label for="price">Enter price before tax: </label><input type="text" id="price"></h2>
-                <h2><label for="tip">Tip %: </label><input type="text" id="tip" value="15"></h2>
-                <button id="calculate">calculate</button>
-                <h2 id="final">Final tip amount</h2>
+                <h2><label for="price">Enter price before tax: </label><input type="number" id="price" placeholder="enter price"></h2>
+                <h2><label for="tip">Tip %: </label><input type="number" id="tip" value="15"></h2>
+                <button id="calculate">calculate</button><br>
+                <h2>Final amount: <span id="final">$0.00</span></h2>
             </div>
         </div>
     <script src="script.js"></script>

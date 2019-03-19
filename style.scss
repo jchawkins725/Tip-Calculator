@@ -21,16 +21,18 @@ h1 {
     padding: 10px 0px;
 
 }
-i.fas {
+.faces:hover i {
+    opacity: .5;
+}
+i {
     margin: 5px 5px;
     color: $orange;
     font-size: 25px;
     cursor: pointer;
-    opacity: 0.7;
     transition: .3s;
     padding: 0px 5px 20px 5px;
 }
-i.fas:hover {
+.faces:hover i:hover {
     opacity: 1;
 }
 #slider {
@@ -64,7 +66,7 @@ i.fas:hover {
     cursor: pointer;
   }
 input {
-    border-radius: 3px;
+    border-radius: 0px;
     border: none;
     height: 28px;
     width: 100px;
@@ -72,20 +74,23 @@ input {
     padding-left: 5px;
 }
 Button {
-	background-color: $orange;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
     border-radius:10px;
     border: none;
 	cursor:pointer;
-	color:#ffffff;
 	font-size:19px;
-    padding:12px 18px;
+    padding:10px 16px;
     opacity: .7;
     transition: .3s;
+    background-color: $orange;
+    color: white;
+    margin-bottom: 5px;
 }
 Button:hover {
     opacity: 1;
+    background-color: white;
+	color:$orange;
 }
 Button:active {
 	position:relative;
@@ -93,15 +98,15 @@ Button:active {
 }
 #final {
     background-color: white;
-    display: block;
     padding: 5px;
     border-radius: 3px;
-    width: 500px;
-    margin: 0 auto;
+    display: inline-block;
+    font-size: 18px;
 }
 #container2 {
     background-color: rgb(226, 226, 226);
-    padding: 10px 0px;
+    padding-bottom: 30px;
+    padding-top: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 

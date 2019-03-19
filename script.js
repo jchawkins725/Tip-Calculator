@@ -10,7 +10,7 @@ slider.oninput = function() {
 }
 output.innerHTML = slider.value + "%";
 
-
+//trigger tip percentage from emoji faces
 document.getElementById("terrible").addEventListener("click",
 function () {
     slider.value = 5;
@@ -44,9 +44,20 @@ function () {
     tip.value = slider.value;
   }
 );
+//trigger button click on "enter"
+price.addEventListener("keyup", function(key) {
+ if (key.keyCode === 13) {
+  document.getElementById("calculate").click();
+ }
+});
+tip.addEventListener("keyup", function(key) {
+  if (key.keyCode === 13) {
+   document.getElementById("calculate").click();
+  }
+ });
 
+//calculate final price amount
 document.getElementById("calculate").addEventListener("click",
 function () {
   final.innerHTML = "$" + (tip.value * price.value / 100).toFixed(2);
-}
-);
+});
