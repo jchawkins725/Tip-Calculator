@@ -41,6 +41,7 @@ i {
 #slider {
   -webkit-appearance: none;
   width: 350px;
+  max-width: 90%;
   height: 15px;
   border-radius: 5px;
   background: #d3d3d3;
