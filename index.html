@@ -11,6 +11,9 @@
     <body>
         <div class="container">
             <h1>Tip Calculator</h1>
+            <div class="bill-amount">
+                <h2 class="inline"><label for="price">Bill amount: </label></h2><input type="number" id="price" placeholder="enter price">
+            </div>
             <h2>Rate your experience to determine tip %:</h2>
             <div class="faces">
                 <i class="fas fa-angry left" id="terrible">Terrible</i>
@@ -23,12 +26,10 @@
             <form>
                 <input type="range" class="form-control-range" id="slider" min="5" max="25" value="15">  
             </form>
-            <h2 id="output"></h2>
+            <h2 id="output">15%</h2>
             <div id="container2"> 
-                <h2 class="inline"><label for="price">Enter price before tax: </label></h2><input type="number" id="price" placeholder="enter price">
-                <h2 class="inline"><label for="tip">Tip %: </label></h2><input type="number" id="tip" value="15">
-                <button id="calculate">calculate</button><br>
-                <h2 class="inline" id="finalheading">Final tip amount: </h2><span id="final">$0.00</span>
+                <h2 class="inline" id="finalheading">Final tip amount: </h2><span id="final-tip" class="final">$0.00</span>
+                <h2 class="inline">Final bill amount: </h2><span id="final-bill" class="final">$0.00</span>
             </div>
         </div>
     <script src="script.js"></script>

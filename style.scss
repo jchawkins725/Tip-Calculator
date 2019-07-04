@@ -19,6 +19,7 @@ h1 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px 0px;
+    margin: 0px;
 
 }
 .faces:hover i {
@@ -34,6 +35,10 @@ i {
 }
 .faces:hover i:hover {
     opacity: 1;
+}
+.bill-amount {
+    background: rgb(226, 226, 226);
+    padding: 10px 0px;
 }
 #slider {
     -webkit-appearance: none;
@@ -106,7 +111,7 @@ Button:active {
 	position:relative;
 	top:1px;
 }
-#final {
+.final {
     background-color: white;
     padding: 5px;
     border-radius: 3px;
@@ -169,7 +174,7 @@ Button:active {
         margin-right: 0px;
         margin-left: 0px;
     }    
-    #final {
+    .final {
         width: 60%;
         margin-top: 10px;
         text-align: center;

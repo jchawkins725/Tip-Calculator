@@ -1,63 +1,83 @@
 var slider = document.getElementById("slider");
 var output = document.getElementById("output");
 var price = document.getElementById("price");
-var tip = document.getElementById("tip");
-var final = document.getElementById("final");
+var final = document.getElementById("final-tip");
+var finalbill = document.getElementById("final-bill")
+let tip = 15;
+let bill = 0;
+let tiptotal = 0;
+let billtotal = 0;
 
 slider.oninput = function() {
-  output.innerHTML = this.value + "%";
-  tip.value = slider.value;
+  tip = this.value;
+  tiptotal = tip * bill / 100; 
+  billtotal = Number(bill) + Number(tiptotal);
+  output.innerHTML = tip + "%";
+  final.innerHTML = "$" + tiptotal.toFixed(2);
+  finalbill.innerHTML = "$" + billtotal.toFixed(2);
 }
-output.innerHTML = slider.value + "%";
+
+price.oninput = function() {
+  bill = this.value;
+  tiptotal = tip * bill / 100; 
+  billtotal = Number(bill) + Number(tiptotal);
+  final.innerHTML = "$" + tiptotal.toFixed(2);
+  finalbill.innerHTML = "$" + billtotal.toFixed(2);
+}
 
 //trigger tip percentage from emoji faces
 document.getElementById("terrible").addEventListener("click",
 function () {
     slider.value = 5;
-    output.innerHTML = slider.value + "%";
-    tip.value = slider.value;
+    tip = 5;
+    output.innerHTML = tip + "%";
+    tiptotal = tip * bill / 100; 
+    billtotal = Number(bill) + Number(tiptotal);
+    final.innerHTML = "$" + tiptotal.toFixed(2);
+    finalbill.innerHTML = "$" + billtotal.toFixed(2);
   }
 );
 document.getElementById("bad").addEventListener("click",
 function () {
     slider.value = 10;
-    output.innerHTML = slider.value + "%";
-    tip.value = slider.value;
+    tip = 10;
+    output.innerHTML = tip + "%";
+    tiptotal = tip * bill / 100; 
+    billtotal = Number(bill) + Number(tiptotal);
+    final.innerHTML = "$" + tiptotal.toFixed(2);
+    finalbill.innerHTML = "$" + billtotal.toFixed(2);
   }
 );
 document.getElementById("satisfactory").addEventListener("click",
 function () {
     slider.value = 15;
-    output.innerHTML = slider.value + "%";
-    tip.value = slider.value;
-  }
-);document.getElementById("good").addEventListener("click",
-function () {
-    slider.value = 20;
-    output.innerHTML = slider.value + "%";
-    tip.value = slider.value;
-  }
-);document.getElementById("great").addEventListener("click",
-function () {
-    slider.value = 25;
-    output.innerHTML = slider.value + "%";
-    tip.value = slider.value;
+    tip = 15;
+    output.innerHTML = tip + "%";
+    tiptotal = tip * bill / 100; 
+    billtotal = Number(bill) + Number(tiptotal);
+    final.innerHTML = "$" + tiptotal.toFixed(2);
+    finalbill.innerHTML = "$" + billtotal.toFixed(2);
   }
 );
-//trigger button click on "enter"
-price.addEventListener("keyup", function(key) {
- if (key.keyCode === 13) {
-  document.getElementById("calculate").click();
- }
-});
-tip.addEventListener("keyup", function(key) {
-  if (key.keyCode === 13) {
-   document.getElementById("calculate").click();
-  }
- });
-
-//calculate final price amount
-document.getElementById("calculate").addEventListener("click",
+document.getElementById("good").addEventListener("click",
 function () {
-  final.innerHTML = "$" + (tip.value * price.value / 100).toFixed(2);
-});
+    slider.value = 20;
+    tip = 20;
+    output.innerHTML = tip + "%";
+    tiptotal = tip * bill / 100; 
+    billtotal = Number(bill) + Number(tiptotal);
+    final.innerHTML = "$" + tiptotal.toFixed(2);
+    finalbill.innerHTML = "$" + billtotal.toFixed(2);
+  }
+);
+document.getElementById("great").addEventListener("click",
+function () {
+    slider.value = 25;
+    tip = 25;
+    output.innerHTML = tip + "%";
+    tiptotal = tip * bill / 100; 
+    billtotal = Number(bill) + Number(tiptotal);
+    final.innerHTML = "$" + tiptotal.toFixed(2);
+    finalbill.innerHTML = "$" + billtotal.toFixed(2);
+  }
+);
