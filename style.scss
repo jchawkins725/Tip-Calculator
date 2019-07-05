@@ -5,13 +5,26 @@ body {
     text-align: center;
     font-family: $font;
     background-color: rgb(223, 223, 223);
+    margin: 0px;
+    margin-top: 20px;
 }
 .container {
     background-color: white;
     width: 600px;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 0px auto;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.55);
+}
+.bill-container {
+    background: rgb(226, 226, 226);
+    padding: 10px 0px;
+}
+.final-container {
+    background-color: rgb(226, 226, 226);
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 h1 {
     font-size: 40px;
@@ -20,7 +33,6 @@ h1 {
     border-top-right-radius: 10px;
     padding: 10px 0px;
     margin: 0px;
-
 }
 .faces:hover i {
     opacity: .5;
@@ -36,10 +48,7 @@ i {
 .faces:hover i:hover {
     opacity: 1;
 }
-.bill-amount {
-    background: rgb(226, 226, 226);
-    padding: 10px 0px;
-}
+
 #slider {
     -webkit-appearance: none;
     width: 350px;
@@ -69,6 +78,9 @@ i {
     border-radius: 50%;
     background: $orange;
     cursor: pointer;
+}
+#output {
+    margin-top: 10px;
 }
 .inline {
     display: inline-block;
@@ -122,13 +134,6 @@ Button:active {
     margin-right: 50px;
     margin-left: 10px;
 }
-#container2 {
-    background-color: rgb(226, 226, 226);
-    padding-bottom: 30px;
-    padding-top: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
 
 @media screen and (max-width:600px) {
     * {
@@ -137,6 +142,7 @@ Button:active {
     body {
         margin: 0;
         padding: 0;
+        background: white;
     }
     .container {
         background-color: white;
@@ -150,14 +156,21 @@ Button:active {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
     }
+    .bill-container {
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+    .tip-container {
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
     h2 {
         font-size: 20px;
         text-align: center;
         width: 100%;
     }
-    #container2 {
-        padding-bottom: 30px;
-        padding-top: 10px;
+    .final-container {
+        padding-bottom: 35px;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
         width: 100%;
@@ -181,16 +194,15 @@ Button:active {
         margin-right: 0px;
         margin-left: 0px;
     }
-    #finalheading {
-        margin-top: -10px;
-        margin-bottom: 0px;
-      }    
     .inline {
         display: block;
         width: 100%;
         text-align: center;
         margin-top: 20px;
     }
+    .finalheading {
+        margin-bottom: 0px;
+      }    
     button {
         display: block;
         margin: 0 auto;

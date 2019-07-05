@@ -2,14 +2,29 @@ body {
   text-align: center;
   font-family: "Muli", sans-serif;
   background-color: #dfdfdf;
+  margin: 0px;
+  margin-top: 20px;
 }
 
 .container {
   background-color: white;
   width: 600px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 0px auto;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.55);
+}
+
+.bill-container {
+  background: #e2e2e2;
+  padding: 10px 0px;
+}
+
+.final-container {
+  background-color: #e2e2e2;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 h1 {
@@ -36,11 +51,6 @@ i {
 
 .faces:hover i:hover {
   opacity: 1;
-}
-
-.bill-amount {
-  background: #e2e2e2;
-  padding: 10px 0px;
 }
 
 #slider {
@@ -74,6 +84,10 @@ i {
   border-radius: 50%;
   background: #ffc71b;
   cursor: pointer;
+}
+
+#output {
+  margin-top: 10px;
 }
 
 .inline {
@@ -134,14 +148,6 @@ Button:active {
   margin-left: 10px;
 }
 
-#container2 {
-  background-color: #e2e2e2;
-  padding-bottom: 30px;
-  padding-top: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
 @media screen and (max-width: 600px) {
   * {
     margin-top: 0;
@@ -150,6 +156,7 @@ Button:active {
   body {
     margin: 0;
     padding: 0;
+    background: white;
   }
 
   .container {
@@ -166,15 +173,24 @@ Button:active {
     border-top-right-radius: 0px;
   }
 
+  .bill-container {
+    padding-top: 5px;
+    padding-bottom: 30px;
+  }
+
+  .tip-container {
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+
   h2 {
     font-size: 20px;
     text-align: center;
     width: 100%;
   }
 
-  #container2 {
-    padding-bottom: 30px;
-    padding-top: 10px;
+  .final-container {
+    padding-bottom: 35px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     width: 100%;
@@ -202,16 +218,15 @@ Button:active {
     margin-left: 0px;
   }
 
-  #finalheading {
-    margin-top: -10px;
-    margin-bottom: 0px;
-  }
-
   .inline {
     display: block;
     width: 100%;
     text-align: center;
     margin-top: 20px;
+  }
+
+  .finalheading {
+    margin-bottom: 0px;
   }
 
   button {
